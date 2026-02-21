@@ -7,12 +7,12 @@ app = Dash(
     __name__,
     use_pages=True,
     suppress_callback_exceptions=True,
-    title="Emissions Sources",
+    title="Greenhouse Gas Emissions Dashboard",
     meta_tags=[
         {"name": "viewport", "content": "width=device-width, initial-scale=1"},
         {
             "name": "description",
-            "content": "Visualize global emissions data from Climate Trace",
+            "content": "Visualize global greenhouse gas emissions data from Climate Trace",
         },
     ],
 )
@@ -37,7 +37,18 @@ app.layout = html.Div(
                     className="footer-source",
                 ),
                 html.P(
-                    ["Built with ", html.Span("❤️"), " by Paul Otieno"],
+                    [
+                        "Built with ",
+                        html.Span("❤️"),
+                        " by ",
+                        html.A(
+                            "Paul Otieno",
+                            href="https://www.linkedin.com/in/paul-otieno-66740889/",
+                            target="_blank",
+                            rel="noopener noreferrer",
+                            className="footer-link",
+                        ),
+                    ],
                     className="footer-credit",
                 ),
             ],

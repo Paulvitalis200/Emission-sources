@@ -89,7 +89,7 @@ layout = html.Div(
                         dcc.Dropdown(
                             id="src-limit",
                             options=_limit_options,
-                            value=100,
+                            value=500,
                             clearable=False,
                             className="filter-dropdown",
                         ),

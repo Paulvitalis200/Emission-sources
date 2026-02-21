@@ -347,27 +347,63 @@ body {
 /* ============================================
    RESPONSIVE
    ============================================ */
-@media (max-width: 900px) {
+
+/* --- Tablet (≤ 1024px) --- */
+@media (max-width: 1024px) {
     .charts-row {
         grid-template-columns: 1fr;
+    }
+
+    .data-page {
+        padding: 24px 24px 32px;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+    }
+
+    .filter-dropdown-wide {
+        width: 170px;
+    }
+}
+
+/* --- Small tablet (≤ 768px) --- */
+@media (max-width: 768px) {
+    .home-page {
+        padding: 40px 16px 30px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .hero-section {
+        margin-bottom: 36px;
     }
 
     .cards-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .nav-card {
         width: 100%;
-        max-width: 400px;
-    }
-
-    .hero-title {
-        font-size: 2.4rem;
+        max-width: 440px;
+        padding: 24px 22px;
     }
 
     .data-page {
-        padding: 20px;
+        padding: 20px 16px 28px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
     }
 
     .filters-row {
@@ -375,32 +411,124 @@ body {
         gap: 10px;
     }
 
+    .filters-label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .filter-group {
+        flex: 1;
+        min-width: calc(50% - 10px);
+    }
+
     .filter-dropdown {
-        width: 100px;
+        width: 100%;
+        flex: 1;
     }
 
     .filter-dropdown-wide {
-        width: 150px;
+        width: 100%;
+        flex: 1;
+    }
+
+    .chart-container {
+        padding: 14px;
+    }
+
+    .chart-title {
+        font-size: 0.9rem;
+    }
+
+    /* Make Plotly charts scrollable if too wide */
+    .chart-container .js-plotly-plot,
+    .map-container .js-plotly-plot {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .app-footer {
+        padding: 30px 16px 20px;
+    }
+
+    .footer-source {
+        font-size: 13px;
+    }
+
+    .footer-credit {
+        font-size: 12px;
     }
 }
 
-@media (max-width: 600px) {
+/* --- Mobile (≤ 480px) --- */
+@media (max-width: 480px) {
+    .home-page {
+        padding: 28px 12px 20px;
+    }
+
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-instruction {
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        margin-bottom: 28px;
+    }
+
+    .nav-card {
+        padding: 20px 18px;
+    }
+
+    .card-title {
+        font-size: 1.05rem;
+    }
+
+    .card-description,
+    .card-detail {
+        font-size: 0.85rem;
+    }
+
+    .data-page {
+        padding: 16px 12px 24px;
+    }
+
+    .page-title {
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+    }
+
+    .back-link {
+        font-size: 0.85rem;
     }
 
     .filters-row {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        padding: 12px;
+        gap: 8px;
     }
 
     .filter-group {
         width: 100%;
+        min-width: 100%;
     }
 
-    .filter-dropdown,
-    .filter-dropdown-wide {
-        width: 100%;
-        flex: 1;
+    .chart-container {
+        padding: 10px;
+    }
+
+    .charts-row {
+        gap: 16px;
+    }
+
+    .app-footer {
+        padding: 24px 12px 16px;
     }
 }

@@ -10,9 +10,9 @@ layout = html.Div(
         # Hero section
         html.Div(
             [
-                html.H1("Emissions Sources", className="hero-title"),
+                html.H1("GHG Emissions sources Dashboard", className="hero-title"),
                 html.P(
-                    "Welcome to the emissions dashboard.",
+                    "Welcome to the greenhouse gas emissions sources dashboard.",
                     className="hero-subtitle",
                 ),
                 html.P(
