@@ -136,12 +136,12 @@ def update_map(year, gas, sectors, limit):
 
     if sources:
         df = pd.DataFrame(sources)
-        df["lat"] = df["centroid"].apply(lambda c: c["latitude"])
-        df["lon"] = df["centroid"].apply(lambda c: c["longitude"])
-
-        # Format emissions for display
-        df["emissions_fmt"] = df["emissionsQuantity"].apply(
-            lambda x: f"{x:,.0f}" if x < 1e6 else f"{x / 1e6:,.1f}M"
+        df = df.assign(
+            lat=df["centroid"].apply(lambda c: c["latitude"]),
+            lon=df["centroid"].apply(lambda c: c["longitude"]),
+            emissions_fmt=df["emissionsQuantity"].apply(
+                lambda x: f"{x:,.0f}" if x < 1e6 else f"{x / 1e6:,.1f}M"
+            ),
         )
 
         fig.add_trace(
