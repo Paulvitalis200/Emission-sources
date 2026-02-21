@@ -17,6 +17,8 @@ app = Dash(
     ],
 )
 
+server = app.server
+
 app.layout = html.Div(
     [
         dash.page_container,
